@@ -1,0 +1,11 @@
+def to_snake_case(text):
+    """
+    Converts a given string to snake_case.
+    Example: "Hello World!" -> "hello_world"
+    """
+    import re
+    # Replace non-alphanumeric characters with spaces
+    text = re.sub(r'[^a-zA-Z0-9]+', ' ', text)
+    # Insert underscores between words and convert to lowercase
+    text = '_'.join(text.strip().split()).lower()
+    return text
